@@ -1,11 +1,11 @@
 {
-    "website": "https://github.com/rjanja/desktop-capture",
+    "website": "https://github.com/ahmedmoselhi/desktop-capture",
     "description": "Screenshot and screencasting tools",
     "contributors": "Rob Adams,Per \u00c5ngstr\u00f6m,Stephen Ostrow,Davide Cristini,Robert Orzanna,Niko Krause",
     "dangerous": false,
     "multiversion": true,
     "uuid": "capture@rjanja",
     "hide-configuration": false,
-    "version": "1.16",
+    "version": "1.18",
     "name": "Desktop Capture"
 }
