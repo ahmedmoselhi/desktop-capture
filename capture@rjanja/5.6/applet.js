@@ -894,8 +894,8 @@ MyApplet.prototype = {
          this._registerKeyBindings();
 
          // this.detect_programs();
-         let xfixesCursor = Cinnamon.XFixesCursor.get_for_stage(global.stage);
-         this._xfixesCursor = xfixesCursor;
+         let cursor_tracker = Meta.CursorTracker.get_for_display(global.display);
+         this._cursor_tracker = cursor_tracker;
 
          this.actor.add_style_class_name('desktop-capture');
 
@@ -956,7 +956,7 @@ MyApplet.prototype = {
     * Show the system mouse pointer.
     */
    showSystemCursor: function() {
-     this._xfixesCursor.show();
+     this._cursor_tracker.show();
    },
 
    /**
@@ -964,7 +964,7 @@ MyApplet.prototype = {
     * Hide the system mouse pointer.
     */
    hideSystemCursor: function() {
-     this._xfixesCursor.hide();
+     this._cursor_tracker.hide();
    },
 
   indent: function(text) {

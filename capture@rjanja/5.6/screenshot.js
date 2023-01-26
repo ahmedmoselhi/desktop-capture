@@ -91,7 +91,7 @@ ScreenshotHelper.prototype = {
 
       global.log("Initializing screenshot tool");
 
-      this._xfixesCursor = Cinnamon.XFixesCursor.get_for_stage(global.stage);
+      this._cursor_tracker = Meta.CursorTracker.get_for_display(global.display);
 
       if (selectionType !== null) {
          this.runCaptureMode(selectionType);
@@ -258,7 +258,7 @@ ScreenshotHelper.prototype = {
     * Show the system mouse pointer.
     */
    showSystemCursor: function() {
-      this._xfixesCursor.show();
+      this._cursor_tracker.show();
    },
 
    /**
@@ -266,7 +266,7 @@ ScreenshotHelper.prototype = {
     * Hide the system mouse pointer.
     */
    hideSystemCursor: function() {
-      this._xfixesCursor.hide();
+      this._cursor_tracker.hide();
    },
 
    flash: function(x, y, width, height) {
